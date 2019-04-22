@@ -1,0 +1,6 @@
+Pillow
+numpy
+pickle-mixin
+ffmpeg-python
+matplotlib
+
