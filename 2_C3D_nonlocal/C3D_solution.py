@@ -1,6 +1,7 @@
 import tensorflow as tf
 import tensorflow.contrib.slim as slim
 from non_local import NonLocalBlock
+# from non_local_solution import NonLocalBlock
 
 def C3D(input_data, num_classes, keep_pro=0.5, non_local=False):
     with tf.variable_scope('C3D'):

@@ -41,9 +41,8 @@ def NonLocalBlock(input_x, out_channels, sub_sample=True, is_bn=True, scope='Non
             w_y = slim.conv3d(y, in_channels, kernel_size=1, stride=1, scope='w')
             if is_bn:
                 w_y = slim.batch_norm(w_y)
-
-        sigma = tf.get_variable('sigma_ratio',[1],initializer=tf.constant_initializer(0.0))
-
-        z = input_x + sigma * w_y
+                
+        z = input_x + w_y
+        
     return z
 
